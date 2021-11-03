@@ -48,11 +48,14 @@ response = requests.get(
 # convert json months into dictionaries
 crime_stats = response.json()[0:]
 
+
+print(crime_stats['outcome_status'])
+
 # print crime stats
-print("2020 Crime Report of Area: ")
-for stats in range(len(crime_stats)):
-    print(f"Category: {crime_stats[stats]['category']}")
-    print(f"Crime ID: {crime_stats[stats]['id']}")
-    print(f"Location: {crime_stats[stats]['location']['street']['name']}")
-    print(f"Outcome: {crime_stats[stats]['outcome_status']}")
-    print("\n")
+# print("2020 Crime Report of Area: ")
+# for stats in range(len(crime_stats)):
+#     print(f"Category: {crime_stats[stats]['category']}")
+#     print(f"Crime ID: {crime_stats[stats]['id']}")
+#     print(f"Location: {crime_stats[stats]['location']['street']['name']}")
+#     print(f"Outcome: {crime_stats[stats]['outcome_status']}")
+#     print("\n")
